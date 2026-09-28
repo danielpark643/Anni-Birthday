@@ -1,4 +1,3 @@
-// Always request the newest scrapbook and footer photos instead of cached copies.
 const photoRefreshVersion = Date.now();
 document.querySelectorAll(".album-slide img, .footer-photo").forEach((image) => {
   const sourceWithoutVersion = image.getAttribute("src").split("?")[0];
@@ -90,7 +89,6 @@ document.addEventListener("keydown", (event) => {
 });
 updateBookControls();
 
-// Four-picture photo booth.
 const cameraVideo = document.querySelector(".camera-video");
 const cameraPlaceholder = document.querySelector(".camera-placeholder");
 const startCameraButton = document.querySelector(".start-camera");
@@ -404,7 +402,7 @@ function startTomatoRain() {
   for (let index = 0; index < 34; index += 1) {
     const tomato = document.createElement("span");
     tomato.className = "falling-tomato";
-    tomato.textContent = "🍅";
+    tomato.textContent = index % 3 === 0 ? "🧀" : "🍅";
     tomato.style.setProperty("--tomato-left", `${Math.random() * 100}%`);
     tomato.style.setProperty("--tomato-size", `${24 + Math.random() * 34}px`);
     tomato.style.setProperty("--tomato-speed", `${2 + Math.random() * 1.5}s`);
