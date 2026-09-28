@@ -230,6 +230,28 @@ h2 span {
   font-size: 25px;
   cursor: pointer;
 }
+.letter-sticker {
+  position: absolute;
+  z-index: 7;
+  display: block;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(3px 7px 7px #10243e3d);
+}
+.kombucha-letter-sticker {
+  width: 118px;
+  max-width: 118px;
+  top: 90px;
+  left: -78px;
+  transform: rotate(-9deg);
+}
+.coffee-letter-sticker {
+  width: 136px;
+  max-width: 136px;
+  right: -88px;
+  bottom: 75px;
+  transform: rotate(8deg);
+}
 .envelope-button {
   width: min(520px, 92%);
   height: 300px;
