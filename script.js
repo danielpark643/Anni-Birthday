@@ -2,7 +2,7 @@
 const photoRefreshVersion = Date.now();
 document
   .querySelectorAll(
-    ".album-slide img, .footer-photo, .handwritten-letter, .envelope-cover-photo",
+    ".album-slide img, .footer-photo, .handwritten-letter, .envelope-cover-photo, .scrapbook-drawing img",
   )
   .forEach((image) => {
     const sourceWithoutVersion = image.getAttribute("src").split("?")[0];
@@ -395,6 +395,7 @@ siteAudio.addEventListener("ended", () => loadTrack(currentTrack + 1, true));
 siteAudio.volume = 0.45;
 loadTrack(0);
 
+// Birthday wish.
 const wishButton = document.querySelector(".wish-button");
 const wishOverlay = document.querySelector(".wish-overlay");
 let tomatoRain;
