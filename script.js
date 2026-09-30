@@ -1,8 +1,13 @@
+// Always request the newest scrapbook and footer photos instead of cached copies.
 const photoRefreshVersion = Date.now();
-document.querySelectorAll(".album-slide img, .footer-photo").forEach((image) => {
-  const sourceWithoutVersion = image.getAttribute("src").split("?")[0];
-  image.src = `${sourceWithoutVersion}?fresh=${photoRefreshVersion}`;
-});
+document
+  .querySelectorAll(
+    ".album-slide img, .footer-photo, .handwritten-letter, .envelope-cover-photo",
+  )
+  .forEach((image) => {
+    const sourceWithoutVersion = image.getAttribute("src").split("?")[0];
+    image.src = `${sourceWithoutVersion}?fresh=${photoRefreshVersion}`;
+  });
 
 // Photo lightbox.
 const lightbox = document.querySelector(".lightbox");
@@ -89,6 +94,7 @@ document.addEventListener("keydown", (event) => {
 });
 updateBookControls();
 
+// Four-picture photo booth.
 const cameraVideo = document.querySelector(".camera-video");
 const cameraPlaceholder = document.querySelector(".camera-placeholder");
 const startCameraButton = document.querySelector(".start-camera");
@@ -389,7 +395,6 @@ siteAudio.addEventListener("ended", () => loadTrack(currentTrack + 1, true));
 siteAudio.volume = 0.45;
 loadTrack(0);
 
-// Birthday wish.
 const wishButton = document.querySelector(".wish-button");
 const wishOverlay = document.querySelector(".wish-overlay");
 let tomatoRain;

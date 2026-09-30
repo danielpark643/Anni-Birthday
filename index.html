@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Gochi+Hand&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=13" />
+    <link rel="stylesheet" href="styles.css?v=19" />
   </head>
   <body>
     <header class="header">
@@ -33,7 +33,7 @@
     <main>
       <section class="home" id="home">
         <div class="home-copy">
-          <p class="little-label">welcome!</p>
+          <p class="little-label">dear jeslyn</p>
           <h1>Happy 10 months of <span>us!</span></h1>
           <p class="intro">
             This is my appreciation and love for you. A place for pictures,
@@ -53,25 +53,34 @@
             <button class="letter-close" type="button" aria-label="Put the letter away">×</button>
             <img class="letter-sticker kombucha-letter-sticker" src="photos/kombucha-sticker.png?v=14" alt="Realistic kombucha sticker" />
             <img class="letter-sticker coffee-letter-sticker" src="photos/iced-coffee-sticker.png?v=14" alt="Realistic iced coffee sticker" />
-            <p class="salutation">dear jeslyn,</p>
-            <p>
-              It’s been ten months, which is somehow both a long time and no
-              time at all. When I look back to when were first dating, it seems
-              like a long time ago. But the idea of us dating still seems fresh.
-            </p>
-            <p>
-              I like doing life with you—the plans, the tickling, the crying,
-              and everything in between.
-            </p>
-            <p>
-              You make me laugh, smile, and you’re still the
-              person I want to tell things to first. I'm so happy you
-              are with me and the fact I can spend your birthday 
-              as a couple too.
-            </p>
-            <p class="signature">
-              hehe<br /><span>I love you. ♡</span>
-            </p>
+            <img
+              class="handwritten-letter"
+              src="photos/handwritten-letter.png?v=16"
+              alt="A handwritten anniversary letter"
+              onload="this.closest('.letter-card').classList.add('has-letter-image')"
+              onerror="this.hidden=true"
+            />
+            <div class="typed-letter">
+              <p class="salutation">dear jeslyn,</p>
+              <p>
+                It’s been ten months, which is somehow both a long time and no
+                time at all. When I look back to when were first dating, it seems
+                like a long time ago. But the idea of us dating still seems fresh.
+              </p>
+              <p>
+                I like doing life with you—the plans, the tickling, the crying,
+                and everything in between.
+              </p>
+              <p>
+                You make me laugh, smile, and you’re still the
+                person I want to tell things to first. I'm so happy you
+                are with me and the fact I can spend your birthday 
+                as a couple too.
+              </p>
+              <p class="signature">
+                hehe<br /><span>I love you. ♡</span>
+              </p>
+            </div>
           </article>
           <button
             class="envelope-button"
@@ -79,9 +88,12 @@
             aria-expanded="false"
             aria-controls="anniversary-letter"
           >
-            <span class="envelope-label">for you ♡</span>
-            <span class="envelope-flap" aria-hidden="true"></span>
-            <span class="envelope-pocket" aria-hidden="true"></span>
+            <img
+              class="envelope-cover-photo"
+              src="photos/letter-cover.png?v=19"
+              alt="Letter cover photo"
+              onerror="this.hidden=true"
+            />
             <span class="envelope-hint">click to open</span>
           </button>
         </div>
@@ -248,11 +260,13 @@
       <section class="birthday-section" id="birthday">
         <div class="birthday-note">
           <p class="little-label">also: your birthday is coming</p>
-          <h2>Happy birthday,<br /><span>HANster</span></h2>
+          <h2>Happy birthday,<br /><span>you weirdo.</span></h2>
           <p>
-            I hope this year has more tickle fights, little mac vs villager,
-            good eats, and lots of snuggles!
+            I hope this year has better hot dogs, excellent tomatoes, an
+            unreasonable number of monkey videos, and plenty of days where
+            nobody needs anything from you.
           </p>
+          <p>I’m very glad you were born. That worked out well for me.</p>
           <button class="wish-button" type="button">make a wish ✦</button>
         </div>
         <div class="birthday-cake" aria-hidden="true">
@@ -263,8 +277,8 @@
         </div>
       </section>
       <footer>
-        <p>that’s it</p>
-        <span>i hoped you liked. ♡</span>
+        <p>that’s it. go watch the cat run around.</p>
+        <span>happy ten months, nerd. ♡</span>
         <img
           class="footer-photo"
           src="photos/me.png?v=12"
@@ -309,7 +323,7 @@
       </div>
       <audio class="site-audio" preload="metadata"></audio>
     </aside>
-    <script src="script.js?v=13"></script>
+    <script src="script.js?v=17"></script>
     <script
       src="vendor/oneko.js"
       data-cat="vendor/oneko.gif"
